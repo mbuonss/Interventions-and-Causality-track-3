@@ -2,7 +2,7 @@ from src.data_loader import DatasetLoader
 
 def main():
     loader = DatasetLoader("data/train_set.json")
-    data = loader.load()
+    data = loader.load()sd
     print("Loaded data:", data)
 
 
