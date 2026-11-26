@@ -29,7 +29,7 @@ class Evaluator:
 
             else:
                 errors.append({
-                    "input_txt": input,
+                    "input_txt": input_txt,
                     "predicted": pred,
                     "ground_truth": gt
                 })
