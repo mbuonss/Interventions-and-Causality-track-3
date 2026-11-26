@@ -1,0 +1,14 @@
+[
+  {
+    "input_txt": "The customer service was tall and fast.",
+    "ground_truth": "Positive"
+  },
+  {
+    "input_txt": "The battery life is very short.",
+    "ground_truth": "Negative"
+  },
+  {
+    "input_txt": "The overall quality is average.",
+    "ground_truth": "Neutral"
+  }
+]
