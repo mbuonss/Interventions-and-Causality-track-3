@@ -9,9 +9,15 @@ class FeedbackGenerator:
 
         #enumerate gives me index + element of the list "errors"
         for i, err in enumerate(errors, start = 1):
-            feedback_txt += f"Error #{i}:\n"
-            feedback_txt += f" - Input: {err['input_txt']}\n"
-            feedback_txt += f" - Predicted: {err['predicted']}\n"
-            feedback_txt += f" - Ground Truth: {err['ground_truth']}\n\n"
+            feedback_txt += ( f"Error #{i}:\n"
+            f" - Input: {err['input_txt']}\n"
+            f" - Predicted: {err['predicted']}\n"
+            f" - Ground Truth: {err['ground_truth']}\n\n"
+        )
+            # feedback_txt += f"Error #{i}:\n"
+            # feedback_txt += f" - Input: {err['input_txt']}\n"
+            # feedback_txt += f" - Predicted: {err['predicted']}\n"
+            # feedback_txt += f" - Ground Truth: {err['ground_truth']}\n\n"
+
 
         return feedback_txt
