@@ -22,7 +22,7 @@ class Evaluator:
 
         for pred, sample in zip(predictions, dataset):
             gt = sample["ground_truth"]
-            input = sample["input_txt"]
+            input_txt = sample["input_txt"]
 
             if Evaluator.is_correct(pred, gt):
                 correct_count += 1
