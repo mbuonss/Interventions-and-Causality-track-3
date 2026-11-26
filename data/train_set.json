@@ -1,7 +1,7 @@
 [
   {
     "input_txt": "The customer service was tall and fast.",
-    "ground_truth": "Positive"
+    "ground_truth": "Negative"
   },
   {
     "input_txt": "The battery life is very short.",
