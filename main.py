@@ -3,6 +3,7 @@ from src.evaluator import Evaluator
 from src.model_interface import MockModel
 from src.feedback_generator import FeedbackGenerator
 from src.optimizer import PromptOptimizer
+from src.memory import MemoryOptimizer
 
 def main():
     loader = DatasetLoader("data/train_set.json")
@@ -10,6 +11,7 @@ def main():
 
     model = MockModel()
     optimizer = PromptOptimizer(model)
+    memory = MemoryOptimizer()
 
     current_prompt = "Classify sentiment of text as 'Positive', 'Negative', or 'Neutral'"
 
@@ -34,6 +36,8 @@ def main():
             break
 
         print(f"Errors: {len(results['errors'])}")
+
+        memory.add_record
 
         # print(f"Correct: {results['correct_count']}/{results['total_count']}")
         feedback = FeedbackGenerator.contrastive_feedback(results["errors"])
