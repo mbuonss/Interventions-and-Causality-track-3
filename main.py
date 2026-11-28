@@ -47,9 +47,11 @@ def main():
         # print(f"Correct: {results['correct_count']}/{results['total_count']}")
         feedback = FeedbackGenerator.contrastive_feedback(results["errors"])
 
+        history_summary = memory.get_history_summary()
+
         # print("\n[Contrastive Feedback]\n"
         #       f"{feedback}")
-        current_prompt = optimizer.optimize_prompt(current_prompt, feedback, history_sumamry)
+        current_prompt = optimizer.optimize_prompt(current_prompt, feedback, history_summary)
         print(f"Updated system prompt for new iteration: '{current_prompt}'\n")
 
         iteration += 1
